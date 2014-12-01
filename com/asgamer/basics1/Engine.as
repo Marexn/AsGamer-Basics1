@@ -10,7 +10,7 @@ package com.asgamer.basics1
 	
 	public class Engine extends MovieClip
 	{
-		
+		private var numStars:int = 80;
 		//our constructor function. This runs when an object of 
 		//the class is created
 		public function Engine()
@@ -23,6 +23,11 @@ package com.asgamer.basics1
 			
 			ourShip.x = stage.stageWidth / 2;
 			ourShip.y = stage.stageHeight / 2;
+			
+			for (var i:int = 0; i < numStars; i++)
+			{
+				stage.addChildAt(new Star(stage), 1);
+			}
 		}
 	}
 }
